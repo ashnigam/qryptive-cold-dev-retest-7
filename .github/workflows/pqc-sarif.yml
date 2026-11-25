@@ -1,0 +1,31 @@
+name: PQC SARIF Scan
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  security-events: write
+jobs:
+  pqc-sarif:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: PQC Vulnerability Scanner
+        uses: qryptive/pqc-scanner-action@v1
+        with:
+          fail_on_vulnerable: "false"
+          severity_threshold: medium
+          scan_scope: auto
+          report_format: sarif
+      - name: Upload code scanning results
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: pqc-results.sarif
+      - name: Keep SARIF report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: qryptive-scan-sarif
+          path: pqc-results.sarif
