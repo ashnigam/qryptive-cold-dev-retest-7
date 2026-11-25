@@ -1,0 +1,4 @@
+security.provider.1=SUN
+jdk.tls.disabledAlgorithms=SSLv3
+jdk.certpath.disabledAlgorithms=MD2
+ssl.KeyManagerFactory.algorithm=SunX509

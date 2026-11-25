@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: parcel
+spec:
+  secretName: parcel-tls
+  dnsNames: [parcel.example.test]
+  privateKey:
+    algorithm: RSA
+    size: 2048
+  issuerRef:
+    name: local-ca

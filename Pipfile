@@ -1,0 +1,2 @@
+[packages]
+cryptography = "==42.0.0"

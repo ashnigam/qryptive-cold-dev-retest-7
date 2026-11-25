@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: linkerd-config
+  namespace: linkerd
+data:
+  identityTrustDomain: cluster.local
+  identityIssuerScheme: kubernetes.io/tls

@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  DispatchKey:
+    Type: AWS::KMS::Key
+    Properties:
+      KeySpec: RSA_2048
+      KeyUsage: SIGN_VERIFY
+  LegacyListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      Port: 443
+      Protocol: HTTPS
+      SslPolicy: ELBSecurityPolicy-2015-05

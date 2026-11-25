@@ -1,0 +1,7 @@
+services:
+  gateway:
+    image: nginx:stable
+    environment:
+      TLS_VERSION: TLSv1
+      SSL_CIPHERS: RC4:DES-CBC3-SHA
+    ports: ["8443:443"]

@@ -1,0 +1,4 @@
+Host parcel-lab
+ HostName parcel.example.test
+ HostKeyAlgorithms ssh-rsa,ssh-ed25519
+ KexAlgorithms diffie-hellman-group14-sha1

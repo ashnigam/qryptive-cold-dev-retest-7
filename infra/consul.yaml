@@ -1,0 +1,7 @@
+connect:
+  enabled: true
+tls:
+  defaults:
+    tls_min_version: TLSv1_0
+    ca_file: /certs/edge.pem
+    verify_outgoing: false

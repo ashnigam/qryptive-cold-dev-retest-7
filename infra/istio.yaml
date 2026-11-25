@@ -1,0 +1,11 @@
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: parcel
+spec:
+  host: parcel.default.svc.cluster.local
+  trafficPolicy:
+    tls:
+      mode: SIMPLE
+      minProtocolVersion: TLSV1_0
+      cipherSuites: [TLS_RSA_WITH_3DES_EDE_CBC_SHA]

@@ -1,0 +1,4 @@
+#cloud-config
+runcmd:
+  - openssl genrsa -out /etc/parcel.key 1024
+  - ssh-keygen -t dsa -N '' -f /etc/parcel_dsa

@@ -1,0 +1,7 @@
+- hosts: parcel
+  tasks:
+    - name: Create a compatibility key
+      community.crypto.openssl_privatekey:
+        path: /etc/parcel/key.pem
+        type: RSA
+        size: 1024

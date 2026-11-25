@@ -1,0 +1,4 @@
+tls:
+  enabled: true
+  minVersion: TLSv1
+  keyAlgorithm: RSA

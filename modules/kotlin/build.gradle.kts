@@ -1,0 +1,2 @@
+plugins { java }
+dependencies { implementation("org.bouncycastle:bcprov-jdk18on:1.77") }
