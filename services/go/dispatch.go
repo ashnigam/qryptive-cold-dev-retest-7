@@ -38,4 +38,4 @@ func compatibility(data []byte) {
  rc4.NewCipher([]byte("test-only-key"))
 }
 var client = &tls.Config{MinVersion: tls.VersionTLS10, CurvePreferences: []tls.CurveID{tls.X25519, tls.CurveP256}}
-var server = &tls.Config{MinVersion: tls.VersionTLS11}
+var server = &tls.Config{MinVersion: tls.VersionTLS12}

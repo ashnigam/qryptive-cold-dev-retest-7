@@ -6,7 +6,7 @@ from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from Crypto.Cipher import DES, ARC4, Blowfish
 
 def sign_manifest(payload):
-    signing_key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+    signing_key = rsa.generate_private_key(public_exponent=65537, key_size=3072)
     return signing_key.sign(payload, padding.PKCS1v15(), hashes.SHA256())
 
 def sign_label(payload):
